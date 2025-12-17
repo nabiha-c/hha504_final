@@ -9,7 +9,7 @@
 | Storage Layer                         | **GCP Cloud Storage**                                  | Stores referral attachments (PDFs/images). The database stores the file path/URL instead of the file itself                |             |
 | Database/SQL Layer                    | **GCP Cloud SQL (MySQL)**                              | Stores structured referral records, status history, and optional overdue flags; accessed via SQLAlchemy                    | **Assignment 4** (MySQL on VM vs Managed Service + SQLAlchemy/pandas) |
 | Serverless / Automation               | **GCP Cloud Functions (2nd gen)**                      | Triggered when a document is uploaded to Cloud Storage to validate file type/size and write document metadata to Cloud SQL | **Assignment 3** (HTTP serverless function + cloud deployment)        |
-| Scheduling (Optional but Recommended) | **GCP Cloud Scheduler**                                | Runs a daily job to check for overdue referrals (past due date) and flag them in Cloud SQL                                 | (Adds operational automation + cost-efficient)                        |
+| Scheduling | **GCP Cloud Scheduler**                                | Runs a daily job to check for overdue referrals (past due date) and flag them in Cloud SQL                                 | (Adds operational automation + cost-efficient)                        |
 | Monitoring / Logs                     | **Cloud Logging**                                      | Central logging for VM/app (via agent), Cloud Functions logs, and basic troubleshooting                                    |                                            |
 
 ---
